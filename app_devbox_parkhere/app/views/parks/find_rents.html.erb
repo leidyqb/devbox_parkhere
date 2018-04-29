@@ -1,0 +1,133 @@
+
+<div class="container">
+
+    <h1>Consulta de estacionamientos reservados</h1>
+
+    <div class='col-sm-2'>
+        <div class="form-group">       
+            <h5>Fecha y hora desde</h5>
+            <div class='input-group date' id='datetimepicker1'>
+                <input type='text' class="form-control" />
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(function () {
+            $('#datetimepicker1').datetimepicker();
+        });
+    </script>
+
+    <div class='col-sm-2'>
+        <div class="form-group">       
+            <h5>Fecha y hora hasta</h5>
+            <div class='input-group date' id='datetimepicker2'>
+                <input type='text' class="form-control" />
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class='col-sm-1'>
+        <br>
+        <div class="form-group">       
+            <%= button_tag :class => "btn button-success btn-block"  do %>
+            <% link_to "Buscar"  %>
+            <% end %>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(function () {
+            $('#datetimepicker2').datetimepicker();
+        });
+    </script>
+
+
+
+    <!-- table container -->
+
+    <div class="col-lg-12">
+        <hr> 
+        <div class="row">
+            <div class="col-md-2">
+                <a href="#">
+                    <%= image_tag('demo.jpg' , :class => "img-rounded" , :size => "120x120") %>
+                </a>
+            </div>
+            <div class="card-body">
+                <h4 class="card-title">
+                    <%= link_to 'Estacionamiento como Miraflores', parks_rent_path %>
+                </h4>
+                <h5>S/ 10.00</h5>
+                <p class="card-text">Av. Benavides 123 Lima, Lima, Miraflores</p>
+            </div>
+        </div>
+        <hr> 
+        <div class="row">
+            <div class="col-md-2">
+                <a href="#">
+                    <%= image_tag('demo.jpg' , :class => "img-rounded" , :size => "120x120") %>
+                </a>
+            </div>
+            <div class="card-body">
+                <h4 class="card-title">
+                    <a href="#">Estacionamiento como Miraflores</a>
+                </h4>
+                <h5>S/ 10.00</h5>
+                <p class="card-text">Av. Benavides 123 Lima, Lima, Miraflores</p>
+            </div>
+        </div>
+        <hr> 
+
+        <div class="row">
+            <div class="col-md-2">
+                <a href="#">
+                    <%= image_tag('demo.jpg' , :class => "img-rounded" , :size => "120x120") %>
+                </a>
+            </div>
+            <div class="card-body">
+                <h4 class="card-title">
+                    <%= link_to 'Estacionamiento como Miraflores', parks_rent_path %>
+                </h4>
+                <h5>S/ 10.00</h5>
+                <p class="card-text">Av. Benavides 123 Lima, Lima, Miraflores</p>
+            </div>
+        </div>
+        <hr> 
+        <div class="row">
+            <div class="col-md-2">
+                <a href="#">
+                    <%= image_tag('demo.jpg' , :class => "img-rounded" , :size => "120x120") %>
+                </a>
+            </div>
+            <div class="card-body">
+                <h4 class="card-title">
+                    <%= link_to 'Estacionamiento como Miraflores', parks_rent_path %>
+                </h4>
+                <h5>S/ 10.00</h5>
+                <p class="card-text">Av. Benavides 123 Lima, Lima, Miraflores</p>
+            </div>
+        </div>
+        <hr> 
+        <div class="row">
+            <div class="col-md-2">
+                <a href="#">
+                    <%= image_tag('demo.jpg' , :class => "img-rounded" , :size => "120x120") %>
+                </a>
+            </div>
+            <div class="card-body">
+                <h4 class="card-title">
+                    <%= link_to 'Estacionamiento como Miraflores', parks_rent_path %>
+                </h4>
+                <h5>S/ 10.00</h5>
+                <p class="card-text">Av. Benavides 123 Lima, Lima, Miraflores</p>
+            </div>
+        </div>
+    </div>
+</div>

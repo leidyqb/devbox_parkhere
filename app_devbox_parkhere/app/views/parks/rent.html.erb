@@ -1,0 +1,229 @@
+
+<div class="container">
+    <%= form_for @alquiler , :url => { :action => :rent_reserved } do |alq| %>
+    <div class="row">
+        <h2><%= @estaciona.no_descriptivo %></h2>
+        <div class="col-lg-4">
+            <h4>Dirección: <%= @estaciona.no_direccion %></h4>
+            <div class='col-sm-10'>
+                <div class="form-group">       
+                    <h5>Fecha y hora desde</h5>
+                    <div class='input-group date' id='datetimepicker1'>
+                        <%= alq.text_field :fe_fechainicio , :class => "form-control" %>                   
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <script type="text/javascript">
+                $(function () {
+                    $('#datetimepicker1').datetimepicker();
+                });
+            </script>
+
+            <div class='col-sm-10'>
+                <div class="form-group">       
+                    <h5>Fecha y hora hasta</h5>
+                    <div class='input-group date' id='datetimepicker2'>
+                        <%= alq.text_field :fe_fechafin , :class => "form-control" %>
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <script type="text/javascript">
+                $(function () {
+                    $('#datetimepicker2').datetimepicker();
+                });
+            </script>
+
+        </div>
+        <div >
+            <iframe class="col-lg-4" width="600" height="450" frameborder="0" style="border:0"
+                    src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJVUrqKGXJBZER3XAI5HBtpoU&key=AIzaSyAG40_1CVf4GZY188IlCHW4auSjt8AujL8" allowfullscreen></iframe>           
+        </div>
+        <div class="col-lg-3">
+            <div class="panel panel-default">
+                <div class="panel-heading" align="center"> 
+                    <h4>S/ <%= @estaciona.nu_precioporhora %> por Hora</h4>
+                    <%= alq.hidden_field :nu_precio, :value => @estaciona.nu_precioporhora %> 
+                </div>
+                <div class="panel-body">
+
+                    <h3 align="center"></h3>
+                    <div align="center" >
+                        <%= image_tag('demo.jpg' , :class => "img-rounded" , :size => "120x120") %>
+                    </div>
+                    <hr>
+                    <div align="center" >                   
+                        <%= alq.submit 'Reservar' , :class => "btn button-default"  %>
+                    </div>
+                    <hr>
+
+                    <div class="well" style="max-height: 300px;overflow: auto;">
+                        <ul class="list-group checked-list-box">
+                            <li class="list-group-item">Limpieza de exterior</li>
+                            <li class="list-group-item">Limpieza de exterior</li>
+                            <li class="list-group-item">Limpieza completa</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <% end %>
+    <h2>Comentarios</h2>
+    <div class="media">
+
+        <div class="media-body" style="padding-left: 5px">
+            <h3 class="media-heading">Pedro Perez <small><i>Posteado en February 19, 2018</i></small></h3>
+            <h5>comentario Inicial.</h5>
+            <button class="btn btn-default" data-toggle="collapse" data-target="#subcomentar">Responder</button>
+            <div id="subcomentar" class="collapse">
+                <br>
+                <form>
+                    <div class="form-group">
+                        <label for="sresponder" class="sr-only">Responder</label>
+                        <input type="text" class="form-control" id="sresponder" placeholder="Comentar">
+                    </div>
+                    <button type="submit" class="btn btn-primary ">Enviar</button>
+                </form>          
+            </div>
+            <!-- Nested media object -->
+            <div class="media">
+
+                <div class="media-body" style="padding-left: 5px">
+                    <h3 class="media-heading">Luz Garcia <small><i>Posteado en February 19, 2018</i></small></h3>
+                    <h5>Sub comentario.</h5>
+                    <button class="btn btn-default" data-toggle="collapse" data-target="#subcomentar2">Responder</button>
+                    <div id="subcomentar2" class="collapse">
+                        <br>
+                        <form>
+                            <div class="form-group">
+                                <label for="sresponder2" class="sr-only">Responder</label>
+                                <input type="text" class="form-control" id="sresponder2" placeholder="Comentar">
+                            </div>
+                            <button type="submit" class="btn btn-primary ">Enviar</button>
+                        </form>          
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="media">
+
+        <div class="media-body" style="padding-left: 5px">
+            <h3 class="media-heading">Juan Albitrez <small><i>Posteado en February 19, 2018</i></small></h3>
+            <h5>Comentario adicional.</h5>
+            <button class="btn btn-default" data-toggle="collapse" data-target="#subcomentar1">Responder</button>
+            <div id="subcomentar1" class="collapse">
+                <br>
+                <form>
+                    <div class="form-group">
+                        <label for="sresponder" class="sr-only">Responder</label>
+                        <input type="text" class="form-control" id="sresponder1" placeholder="Comentar">
+                    </div>
+                    <button type="submit" class="btn btn-primary ">Enviar</button>
+                </form>          
+            </div>
+        </div>
+    </div>
+    <br>
+    <h3>Dejar Comentario</h3>
+    <form>
+        <div class="form-group">
+            <label for="responder" class="sr-only">Responder</label>
+            <input type="text" class="form-control" id="responder" placeholder="Comentar">
+        </div>
+        <button type="submit" class="btn btn-primary ">Enviar</button>
+    </form>
+</div>
+
+
+
+<script type="text/javascript">
+    $(function () {
+        $('.list-group.checked-list-box .list-group-item').each(function () {
+
+            // Settings
+            var $widget = $(this),
+                $checkbox = $('<input type="checkbox" class="hidden" />'),
+                color = ($widget.data('color') ? $widget.data('color') : "primary"),
+                style = ($widget.data('style') == "button" ? "btn-" : "list-group-item-"),
+                settings = {
+                    on: {
+                        icon: 'glyphicon glyphicon-check'
+                    },
+                    off: {
+                        icon: 'glyphicon glyphicon-unchecked'
+                    }
+                };
+
+            $widget.css('cursor', 'pointer')
+            $widget.append($checkbox);
+
+            // Event Handlers
+            $widget.on('click', function () {
+                $checkbox.prop('checked', !$checkbox.is(':checked'));
+                $checkbox.triggerHandler('change');
+                updateDisplay();
+            });
+            $checkbox.on('change', function () {
+                updateDisplay();
+            });
+
+
+            // Actions
+            function updateDisplay() {
+                var isChecked = $checkbox.is(':checked');
+
+                // Set the button's state
+                $widget.data('state', (isChecked) ? "on" : "off");
+
+                // Set the button's icon
+                $widget.find('.state-icon')
+                    .removeClass()
+                    .addClass('state-icon ' + settings[$widget.data('state')].icon);
+
+                // Update the button's color
+                if (isChecked) {
+                    $widget.addClass(style + color + ' active');
+                } else {
+                    $widget.removeClass(style + color + ' active');
+                }
+            }
+
+            // Initialization
+            function init() {
+
+                if ($widget.data('checked') == true) {
+                    $checkbox.prop('checked', !$checkbox.is(':checked'));
+                }
+
+                updateDisplay();
+
+                // Inject the icon if applicable
+                if ($widget.find('.state-icon').length == 0) {
+                    $widget.prepend('<span class="state-icon ' + settings[$widget.data('state')].icon + '"></span>');
+                }
+            }
+            init();
+        });
+
+        $('#get-checked-data').on('click', function(event) {
+            event.preventDefault(); 
+            var checkedItems = {}, counter = 0;
+            $("#check-list-box li.active").each(function(idx, li) {
+                checkedItems[counter] = $(li).text();
+                counter++;
+            });
+            $('#display-json').html(JSON.stringify(checkedItems, null, '\t'));
+        });
+    });
+</script>

@@ -1,0 +1,68 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="87304CDF-E016-BC80-78B2-40A9ACA05753" name="Estacionamiento_Disponibilidad">
+<createdBy>DesarrolloTSI</createdBy>
+<createdTime>2018-04-09 02:06:40 UTC</createdTime>
+<ownerDesignName>MD_EstacionaAqui</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Nu_Dia" id="AE3C61BC-801D-E2C5-7610-BF88C2FD5242">
+<createdBy>DesarrolloTSI</createdBy>
+<createdTime>2018-04-09 02:08:56 UTC</createdTime>
+<ownerDesignName>MD_EstacionaAqui</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Fe_Inicio" id="B9A9DB11-4A10-A9FA-7E1C-577D3CF8A856">
+<createdBy>DesarrolloTSI</createdBy>
+<createdTime>2018-04-09 02:09:03 UTC</createdTime>
+<ownerDesignName>MD_EstacionaAqui</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Fe_Fin" id="779F39ED-BB08-6B1E-D3FD-7ED85373F81F">
+<createdBy>DesarrolloTSI</createdBy>
+<createdTime>2018-04-09 02:09:03 UTC</createdTime>
+<ownerDesignName>MD_EstacionaAqui</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Co_Estacionamiento" id="D6559383-1792-4F5F-320E-6CC758CF47BE">
+<createdBy>DesarrolloTSI</createdBy>
+<createdTime>2018-04-09 02:12:13 UTC</createdTime>
+<generatorID>F0602F6C-4D7D-047B-B58C-ADD98EFD5D38</generatorID>
+<ownerDesignName>MD_EstacionaAqui</ownerDesignName>
+<referedAttribute>F5944A6E-DACA-A6F7-94EB-3F1EFB9651F8</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="C7E83E36-6BAE-90C8-7424-AB76749DCD02" name="Estacionamiento_Disponibilidad PK">
+<createdBy>DesarrolloTSI</createdBy>
+<createdTime>2018-04-09 02:12:13 UTC</createdTime>
+<ownerDesignName>MD_EstacionaAqui</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>D6559383-1792-4F5F-320E-6CC758CF47BE</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

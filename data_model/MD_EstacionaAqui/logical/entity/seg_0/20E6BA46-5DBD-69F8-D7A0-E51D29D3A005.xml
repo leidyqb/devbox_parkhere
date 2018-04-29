@@ -1,0 +1,77 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="20E6BA46-5DBD-69F8-D7A0-E51D29D3A005" name="TipoVehiculo">
+<createdBy>DesarrolloTSI</createdBy>
+<createdTime>2018-04-09 01:53:09 UTC</createdTime>
+<ownerDesignName>MD_EstacionaAqui</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Co_TipoVehiculo" id="25EC858C-8878-649B-598F-8A324626E245">
+<createdBy>DesarrolloTSI</createdBy>
+<createdTime>2018-04-09 01:53:37 UTC</createdTime>
+<ownerDesignName>MD_EstacionaAqui</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="No_TipoVehiculo" id="EA907E36-8E9A-A183-1556-FEB9ABBDA1B1">
+<createdBy>DesarrolloTSI</createdBy>
+<createdTime>2018-04-09 01:53:37 UTC</createdTime>
+<ownerDesignName>MD_EstacionaAqui</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Nu_DimensionLargo" id="D6F3EF8B-1553-EF4F-BD03-CAB63942CAE1">
+<createdBy>DesarrolloTSI</createdBy>
+<createdTime>2018-04-09 01:54:12 UTC</createdTime>
+<ownerDesignName>MD_EstacionaAqui</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Nu_DimensionAncho" id="E5B6F399-8B75-C330-9D6B-9C45749B38EC">
+<createdBy>DesarrolloTSI</createdBy>
+<createdTime>2018-04-09 01:54:21 UTC</createdTime>
+<ownerDesignName>MD_EstacionaAqui</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Nu_DimensionAlto" id="96899F0E-042B-A958-BEAF-7E1E0283F6DF">
+<createdBy>DesarrolloTSI</createdBy>
+<createdTime>2018-04-09 01:54:21 UTC</createdTime>
+<ownerDesignName>MD_EstacionaAqui</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="AA0151B4-3679-0D12-E101-24D4A402F629" name="TipoVehiculo PK">
+<createdBy>DesarrolloTSI</createdBy>
+<createdTime>2018-04-09 01:58:52 UTC</createdTime>
+<ownerDesignName>MD_EstacionaAqui</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>25EC858C-8878-649B-598F-8A324626E245</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

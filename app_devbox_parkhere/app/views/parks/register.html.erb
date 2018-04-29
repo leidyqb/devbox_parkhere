@@ -1,0 +1,342 @@
+<% content_for :"head" do %>
+<title>Registro de estacionamiento</title>
+<% end %>
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+<script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+
+
+
+<style>
+.gallery
+{
+    display: inline-block;
+    margin-top: 20px;
+}
+</style>
+
+<script>
+$(document).ready(function(){
+    //FANCYBOX
+    //https://github.com/fancyapps/fancyBox
+    $(".fancybox").fancybox({
+        openEffect: "none",
+        closeEffect: "none"
+    });
+});
+   
+</script>
+
+
+<div class="container">
+    <div class="col-sm-9">
+        <h1 class="text-center">Registro de estacionamiento</h1>
+    </div>
+</div>
+
+<div style="margin-top:20px" > </div>
+<div class="container">
+    <%= form_for @estacionamiento , :url => { :action => :register_park } do |f| %>
+        <div class="row">
+            <div class="col-sm-8">
+
+                <div class="form-group">
+                    <label class="control-label col-sm-3" for="name">Titulo</label>
+                    <div class="col-sm-6">
+                         <%= f.text_field :no_descriptivo, placeholder:"Ingrese título", class:"form-control" %>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-sm-3" for="address">Dirección</label>
+                    <div class="col-sm-6">
+                        <%= f.text_field :no_direccion, placeholder:"Ingrese dirección", class:"form-control" %>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-sm-3"></label>
+                    <div class="col-sm-3">
+                        <select type="text" placeholder="Departamento" class="form-control">
+                            <option>Departamento</option>
+                            <option value="op1">Lima</option>
+                            <option value="op2">Arequipa</option>
+                        </select>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <select type="text" placeholder="Provincia" class="form-control">
+                            <option>Provincia</option>
+                            <option value="op1">Lima</option>
+                            <option value="op2">Arequipa</option>
+                        </select>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <select type="text" placeholder="Distrito" class="form-control">
+                            <option>Distrito</option>
+                            <option value="op1">Lima</option>
+                            <option value="op2">Arequipa</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-sm-3" for="phone">Teléfono fijo</label>
+                    <div class="col-sm-6">
+                        <%= f.text_field :no_telefonofijo, placeholder:"Ingrese teléfono", class:"form-control" %>
+                    </div>
+                    <label class="control-label" for="phone">(Opcional)</label>
+                </div>
+            </div>
+
+            <div class="col-sm-4 border">
+
+                <div class="form-group">        
+                    <div class="col-sm-offset-2 col-sm-5">
+                        <%= f.submit 'Registrar' , :class => "btn button-default", :datatoggle => "modal"  %>
+                    </div>
+                </div>
+
+
+                <div class="form-group">        
+                    <div class="col-sm-offset-2 col-sm-5">
+                        <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#pictures">Imágenes</button>
+                    </div>
+                </div>
+
+                <div class="form-group">        
+                    <div class="col-sm-offset-2 col-sm-5">
+
+                       <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#services">Servicios</button>
+                    </div>
+                </div>
+
+                <div class="form-group">        
+                    <div class="panel panel-default col-sm-offset-2 col-sm-5">
+                        <h6>Servicio de limpieza</h6>
+                        <h6>Servicio de lavado</h6>                 
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row">
+
+            <label class="control-label col-sm-2">Precio por hora</label>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" id="price" placeholder="0.00">
+            </div>
+
+            <label class="control-label col-sm-2" for="phone">Ubicación según el tipo</label>
+            <div class="col-sm-2">
+                <select type="text" placeholder="Tipo" class="form-control">
+                    <option>Tipo</option>
+                    <option value="interior">Interior</option>
+                    <option value="mexterior">Exterior</option>
+                    <option value="aire">Aire</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div style="margin-top:30px" > </div>
+
+            <div class="col-sm-3">
+
+
+
+                <div class="span4 col-sm-offset-1">
+                    <div style="margin-top:40px" > </div>
+                    <h3>Ubicación</h3>
+                    <address>
+                        <strong>Estacionamiento Los Portales</strong><br>
+                        Av. La Marina Nro. 2355 Urb. Pando<br>
+                        San Miguel<br>
+                        Lima<br>
+                    </address>
+                </div>
+
+            </div>
+
+            <div class="col-sm-9">
+                <div class="form-group">
+                    <label class="control-label col-sm-3" for="name">Ubicación Google Maps</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" id="name" placeholder="">
+                    </div>
+                    <div class="col-sm-2">
+                        <button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Buscar
+                        </button>
+                    </div>
+                </div>
+
+                <div class="form-group col-sm-9">
+
+                    <div class="span8">
+                        <iframe width="100%" height="350" frameborder="0" style="border:0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26245.536560175082!2d-77.08049382038041!3d-12.08321231575948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c971b3e5404f%3A0xf4ee63ada57c8fc9!2sEstacionamiento+Los+Portales!5e0!3m2!1ses-419!2spe!4v1523562963050"></iframe>
+                    </div>
+
+
+                    <div class="span9">
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-4" for="name">Coordenadas Longitud</label>
+                            <div class="col-sm-4">
+                                <label class="control-label col-sm-4" for="name">-12.0832123</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-4" for="name">Coordenadas Latitud</label>
+                            <div class="col-sm-4">
+                                <label class="control-label col-sm-4" for="name">-77.0804938</label>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+            </div> 
+        </div> 
+    <% end %>
+</div>
+
+
+
+
+
+<div class="modal fade" id="pictures" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a href="#" data-dismiss="modal" class="class pull-right"><span class="glyphicon glyphicon-remove"></span></a>
+                <h3 class="modal-title">Arrastrar imagen</h3>   
+            </div>
+
+            <div class="modal-body">
+                <div class="row">
+                   <div class="list-group gallery">
+                        <div class="col-sm-6 col-md-4">
+                            <a class="thumbnail fancybox" rel="lightbox" href=<%= image_path("auto1.jpg") %>>
+                                <img class="img-responsive" alt="" src=<%= image_path("auto1.jpg") %>>
+                                <div class="caption">
+                                    <h3>Imagen de prueba</h3>
+                                    <p>Breve descripción de la imagen</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-sm-6 col-md-4">
+                            <a class="thumbnail fancybox" rel="lightbox" href=<%= image_path("auto2.jpg") %>>
+                                <img class="img-responsive" alt="" src=<%= image_path("auto2.jpg") %>>
+                                <div class="caption">
+                                    <h3>Imagen de prueba</h3>
+                                    <p>Breve descripción de la imagen</p>
+                                </div>  
+                            </a>
+                        </div>
+
+                        <div class="col-sm-6 col-md-4">
+                            <a class="thumbnail fancybox" rel="lightbox" href=<%= image_path("auto3.jpg") %>>
+                                <img class="img-responsive" alt="" src=<%= image_path("auto3.jpg") %>>
+                                <div class="caption">
+                                      <h3>Imagen de prueba</h3>
+                                      <p>Breve descripción de la imagen</p>
+                                </div>
+                            </a>      
+                        </div>
+                        <div class="col-sm-6 col-md-4">   
+                            <a class="thumbnail fancybox" rel="lightbox" href=<%= image_path("auto4.jpg") %>>
+                                <img class="img-responsive" alt="" src=<%= image_path("auto4.jpg") %>>
+                                <div class="caption">
+                                        <h3>Imagen de prueba</h3>
+                                        <p>Breve descripción de la imagen</p>
+                                </div>
+                            </a>      
+                        </div>
+                        <div class="col-sm-6 col-md-4">
+                            <a class="thumbnail fancybox" rel="lightbox" href=<%= image_path("auto5.jpg") %>>
+                                <img class="img-responsive" alt="" src=<%= image_path("auto5.jpg") %>>
+                                <div class="caption">
+                                    <h3>Imagen de prueba</h3>
+                                    <p>Breve descripción de la imagen</p>
+                                </div>
+                            </a>        
+                        </div>
+                        
+                        <div class="col-sm-6 col-md-4">
+                            <a class="thumbnail fancybox" rel="lightbox" href=<%= image_path("auto6.jpg") %>>
+                                <img class="img-responsive" alt="" src=<%= image_path("auto6.jpg") %>>
+                                <div class="caption">
+                                    <h3>Imagen de prueba</h3>
+                                    <p>Breve descripción de la imagen</p>
+                                </div>
+                            </a>          
+                        </div>
+                   </div>           
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="modal fade" id="services" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+              <a href="#" data-dismiss="modal" class="class pull-right"><span class="glyphicon glyphicon-remove"></span></a>
+              <h3 class="text-center">Registro de servicio adicional del estacionamiento</h3>               
+            </div>
+            <div class="modal-body">
+              <div class="row">
+ 
+              <form class="form-horizontal" style="padding-right: 50px; padding-top: 20px">
+
+                <div class="form-group">
+                    <label class="control-label col-sm-4" >Tipo de Servicio</label>
+                    <div class="col-sm-6">
+                        <select type="text" placeholder="DNI" class="form-control">
+                            <option>Seleccionar tipo de servicio</option>
+                            <option value="lavado">Lavado</option>
+                            <option value="other">Otros</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <div class="form-group" >
+                    <label class="control-label col-sm-4" >Descripción</label>
+                    <div class="col-sm-8">          
+                        <textarea class="form-control" rows="4"></textarea> 
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-sm-4" >Tarifa</label>
+                    <div class="col-sm-2">          
+                        <input type="Precio" class="form-control" id="tarifa" placeholder="0.00">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-3">
+                        <%= button_tag :class => "btn btn-info btn-block"  do %>
+                        <% link_to "Agregar" , parks_register_path %>
+                        <% end %>
+                    </div>
+                    <div class="col-sm-offset-2 col-sm-3">                   
+                        <button type="reset" class="btn btn-info btn-block" >Cancelar</button>
+                    </div>
+
+                </div>
+
+            </form>
+        </div>
+        </div>
+               
+            </div>
+        </div>
+    </div>

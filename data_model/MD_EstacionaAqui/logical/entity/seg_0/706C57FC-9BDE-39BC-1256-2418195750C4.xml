@@ -1,0 +1,47 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="706C57FC-9BDE-39BC-1256-2418195750C4" name="Servicios">
+<createdBy>rcastillo</createdBy>
+<createdTime>2018-03-23 23:22:52 UTC</createdTime>
+<ownerDesignName>MD_EstacionaAqui</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Co_Servicio" id="F4623A8B-3F6F-241B-B4E6-5B79182DB10B">
+<createdBy>rcastillo</createdBy>
+<createdTime>2018-03-23 23:22:58 UTC</createdTime>
+<ownerDesignName>MD_EstacionaAqui</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="No_TipoServicio" id="EAB27C67-2769-E2CB-4263-656B82D0B81C">
+<createdBy>rcastillo</createdBy>
+<createdTime>2018-03-23 23:23:09 UTC</createdTime>
+<ownerDesignName>MD_EstacionaAqui</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60</dataTypeSize>
+<ownDataTypeParameters>60,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="10EB160D-11DA-3C19-F0B5-D9C012A3D11C" name="Servicios PK">
+<createdBy>rcastillo</createdBy>
+<createdTime>2018-03-23 23:26:42 UTC</createdTime>
+<ownerDesignName>MD_EstacionaAqui</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>F4623A8B-3F6F-241B-B4E6-5B79182DB10B</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
